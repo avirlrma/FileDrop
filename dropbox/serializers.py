@@ -4,5 +4,7 @@ from dropbox.models import FileModel
 class FileUploadSerializer(serializers.ModelSerializer):
     class Meta:
         model = FileModel
-        fields = '__all__'
-        
+        fields = ['datafile','size','created','name']
+
+
+    

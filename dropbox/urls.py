@@ -3,5 +3,5 @@ from dropbox import views
 
 urlpatterns = [
     path('upload/', views.FileUploadView.as_view()),
-    #path('dropbox/list',views.list_files)
+    path('list/<pk>',views.FileView.as_view()),
 ]
