@@ -17,8 +17,13 @@ from django.contrib import admin
 from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
+from django.conf.urls import include as in2
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('dropbox/', include('dropbox.urls')),
+]
+
+urlpatterns += [
+    path('api-auth/', in2('rest_framework.urls')),
 ]
